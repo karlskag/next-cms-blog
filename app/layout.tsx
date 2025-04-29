@@ -25,8 +25,8 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "Tina",
-  description: "Tina Cloud Starter",
+  title: "Bajenbloggen",
+  description: "Analyser av Hammarbys verksamhet och matcher",
 };
 
 export default function RootLayout({

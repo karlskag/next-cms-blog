@@ -10,7 +10,7 @@ const Post: Collection = {
   format: 'mdx',
   ui: {
     router: ({ document }) => {
-      return `/posts/${document._sys.breadcrumbs.join('/')}`;
+      return `/${document._sys.breadcrumbs.join('/')}`;
     },
   },
   fields: [
