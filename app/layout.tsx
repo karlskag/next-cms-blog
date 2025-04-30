@@ -4,6 +4,7 @@ import { Inter as FontSans, Lato, Nunito } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { VideoDialogProvider } from "@/components/ui/VideoDialogContext";
 import VideoDialog from "@/components/ui/VideoDialog";
+import { Analytics } from "@vercel/analytics/react"
 
 import "@/styles.css";
 import { TailwindIndicator } from "@/components/ui/breakpoint-indicator";
@@ -36,6 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn(fontSans.variable, nunito.variable, lato.variable)}>
+      <Analytics />
       <body className="min-h-screen bg-background font-sans antialiased">
         <VideoDialogProvider>
           {children}
