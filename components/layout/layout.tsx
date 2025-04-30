@@ -1,8 +1,7 @@
 import React, { PropsWithChildren } from "react";
 import { LayoutProvider } from "./layout-context";
 import client from "../../tina/__generated__/client";
-import { Header } from "./nav/header";
-import { Footer } from "./nav/footer";
+import Link from "next/link";
 
 type LayoutProps = PropsWithChildren & {
   rawPageData?: any;
@@ -23,7 +22,14 @@ export default async function Layout({ children, rawPageData }: LayoutProps) {
 
   return (
     <LayoutProvider globalSettings={globalData.global} pageData={rawPageData}>
-      <main className="overflow-x-hidden pt-10">
+      <div className="flex justify-center">
+        <div className="flex text-muted-foreground">
+          <Link href="/" className="p-2 md:p-3 hover:underline">Start</Link>
+          <div className="p-2 md:p-3">|</div>
+          <a href= "mailto:kontakt.bajenbloggen@gmail.com" className="p-2 md:p-3 hover:underline">kontakt.bajenbloggen@gmail.com</a>
+        </div>
+      </div>
+      <main className="overflow-x-hidden md:pt-10 pb-20">
         {children}
       </main>
     </LayoutProvider>
